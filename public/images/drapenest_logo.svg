@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background / Base Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A5E7A" />
+      <stop offset="100%" stop-color="#1C2B38" />
+    </linearGradient>
+
+    <!-- Curtain Wave Layer Gradients -->
+    <linearGradient id="drapeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8299B2" />
+      <stop offset="100%" stop-color="#3A5E7A" />
+    </linearGradient>
+
+    <linearGradient id="drapeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9AAB89" />
+      <stop offset="100%" stop-color="#839373" />
+    </linearGradient>
+
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#AA7C11" />
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Container Box with Soft Rounded Corners -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)" />
+
+  <!-- Nest Base Outer Arc -->
+  <path d="M 128 320 C 128 410, 384 410, 384 320 Q 384 360, 256 384 Q 128 360, 128 320 Z" fill="url(#drapeGrad1)" opacity="0.6" />
+
+  <!-- Layer 1: Left Curtain Drapery Wave -->
+  <path d="M 144 140 C 144 260, 216 340, 256 360 C 208 310, 176 220, 176 140 Z" fill="url(#drapeGrad1)" filter="url(#shadow)" />
+
+  <!-- Layer 2: Right Curtain Drapery Wave -->
+  <path d="M 368 140 C 368 260, 296 340, 256 360 C 304 310, 336 220, 336 140 Z" fill="url(#drapeGrad1)" filter="url(#shadow)" />
+
+  <!-- Layer 3: Central Golden Nest Arc Folds -->
+  <path d="M 192 170 C 192 280, 240 330, 256 340 C 272 330, 320 280, 320 170 C 300 240, 272 290, 256 295 C 240 290, 212 240, 192 170 Z" fill="url(#drapeGrad2)" filter="url(#shadow)" />
+
+  <!-- Accent: Gold Silk Ribbon Crown -->
+  <path d="M 216 128 C 240 148, 272 148, 296 128 C 280 156, 232 156, 216 128 Z" fill="url(#goldGrad)" />
+  <circle cx="256" cy="120" r="16" fill="url(#goldGrad)" />
+
+  <!-- Nest Base Nestling Curves -->
+  <path d="M 160 300 C 220 370, 292 370, 352 300 C 310 345, 202 345, 160 300 Z" fill="url(#goldGrad)" opacity="0.85" />
+</svg>
